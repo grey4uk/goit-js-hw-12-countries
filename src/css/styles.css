@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+.country-name{
+  text-align: center;
+}
+.country-container{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
