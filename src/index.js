@@ -9,10 +9,9 @@ const ulCountries = document.querySelector('.countries-list');
 const input = document.querySelector('#input');
 input.addEventListener('input', _.debounce(preparedData, 500));
 const searchQuery = 'https://restcountries.eu/rest/v2/name/';
-
 function preparedData(event) {
   clearList();
-  if (event.target.value === null) {
+  if (!event.target.value) {
     return;
   }
   fetchCountries(searchQuery + event.target.value, arrayOfCountries);
@@ -38,7 +37,7 @@ function arrayOfCountries(arrayCountries) {
         return (acc += `<li>${country.name}</li>`);
       }, ''),
     );
-  } else if ((arrayCountries.length = 1)) {
+  } else if ((arrayCountries.length = 1&&arrayCountries[0].name)) {
     ulCountries.insertAdjacentHTML(
       'beforeend',
       countriesTemplate(arrayCountries[0]),
