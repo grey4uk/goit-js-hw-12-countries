@@ -11,10 +11,11 @@ html {
 }
 
 
-.country-name{
+.country-name {
   text-align: center;
 }
-.country-container{
+
+.country-container {
   display: flex;
   justify-content: space-between;
   width: 80%;
