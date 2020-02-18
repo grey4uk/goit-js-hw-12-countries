@@ -7,5 +7,9 @@ export default function fetchCountries(searchQuery, neededCountry) {
     .then(data => data.json())
     .then(data => {
       return neededCountry(data);
-    }).catch(error => PNotify.error({text:"Error of country name!"}));
+    })
+    .catch(error => {
+      PNotify.error({ text: 'Error of country name!' });
+      }
+    );
 }

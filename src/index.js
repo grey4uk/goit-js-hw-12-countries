@@ -37,12 +37,12 @@ function arrayOfCountries(arrayCountries) {
         return (acc += `<li>${country.name}</li>`);
       }, ''),
     );
-  } else if ((arrayCountries.length = 1&&arrayCountries[0].name)) {
+  } else if ((arrayCountries.length = 1&&arrayCountries.length > 0)) {
     ulCountries.insertAdjacentHTML(
       'beforeend',
       countriesTemplate(arrayCountries[0]),
     );
-  }
+  }else{ PNotify.error({ text: 'Error of country name!' });}
 }
 function clearList() {
   ulCountries.innerHTML = '';
